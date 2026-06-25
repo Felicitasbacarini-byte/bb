@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX - Entrena como un Piloto Real</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Victor+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="logo-apex.png" alt="APEX Logo" class="logo">
+            <nav class="nav-links">
+                <a href="#inicio">INICIO</a>
+                <a href="#pilares">TELEMETRÍA</a>
+                <a href="#tecnologia">COMPETENCIA</a>
+                <a href="#cursos" class="btn-primary">INSCRIBIRSE</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>ENTRENA COMO<br>UN PILOTO REAL</h1>
+            <p>Conducción de alto nivel con simuladores profesionales. Superá tus límites y convertite en el piloto que siempre quisiste ser.</p>
+            <div class="hero-buttons">
+                <a href="#cursos" class="btn-neon">MÁS INFORMACIÓN</a>
+                <a href="#circuitos" class="btn-outline">VER CATÁLOGO</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <img src="hero-bg.jpg" alt="Cockpit Simracing" class="hero-img">
+        </div>
+    </section>
+
+    <section class="pista-section">
+        <div class="pista-grid">
+            <div class="pista-text">
+                <h2>DE LA PANTALLA<br>A LA PISTA</h2>
+                <p>El simulador recrea fielmente el comportamiento físico de los vehículos más potentes de las categorías mundiales.</p>
+                <div class="stats-grid">
+                    <div><strong>+120</strong><p>Pilotos activos</p></div>
+                    <div><strong>+2100</strong><p>Horas de entrenamiento</p></div>
+                    <div><strong>+500</strong><p>Carreras ganadas</p></div>
+                </div>
+            </div>
+            <div class="pista-image">
+                <img src="sim-bay.jpg" alt="Simulador Triple Pantalla">
+            </div>
+        </div>
+    </section>
+
+    <div class="sponsors-marquee">
+        <div class="marquee-track">
+            <span>VISA</span>
+            <span>★ Heineken</span>
+            <span>Santander</span>
+            <span>シェル (Shell)</span>
+            <span>VISA</span>
+            <span>VISA</span>
+            <span>★ Heineken</span>
+            <span>Santander</span>
+            <span>シェル (Shell)</span>
+            <span>VISA</span>
+        </div>
+    </div>
+
+    <section class="manifesto">
+        <p>SUPERANDO <span class="highlight">LÍMITES</span>. PERFECCIONANDO DETALLES. FORJANDO PILOTOS CAPACES DE COMPETIR <span class="highlight">DENTRO Y FUERA</span> DE LA PISTA.</p>
+    </section>
+
+    <section class="pilares" id="pilares">
+        <h3>LOS TRES PILARES</h3>
+        <div class="pilares-container">
+            <div class="pilar-card">
+                <div class="pilar-num">01. <span class="arrow">›</span></div>
+                <h4>INNOVACIÓN</h4>
+                <p>Equipamiento de vanguardia constante para mantenernos siempre un paso adelante.</p>
+            </div>
+            <div class="pilar-card">
+                <div class="pilar-num">02. <span class="arrow">›</span></div>
+                <h4>TELEMETRÍA</h4>
+                <p>Herramientas avanzadas de análisis de datos para pulir cada milésima de segundo.</p>
+            </div>
+            <div class="pilar-card">
+                <div class="pilar-num">03. <span class="arrow">›</span></div>
+                <h4>COMPETICIÓN</h4>
+                <p>Formar parte de eventos y campeonatos profesionales a nivel global.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tecnologia" id="tecnologia">
+        <div class="tecnologia-grid">
+            <div class="tecnologia-info">
+                <h3>TECNOLOGÍA<br>DE ELITE</h3>
+                <p>Volantes profesionales réplica de F1 con pantallas LCD de datos críticos interactivos en tiempo real.</p>
+            </div>
+            
+            <div class="interactive-wheel-wrapper">
+                <div class="wheel-display-box">
+                    <img src="volante-base.png" alt="Volante Simracing" class="base-wheel">
+                    <div class="wheel-overlay" id="wheelOverlay"></div>
+                    
+                    <svg viewBox="0 0 800 600" class="wheel-svg-map">
+                        <path d="M 100,100 L 400,100 L 400,300 L 100,300 Z" data-part="screen" class="wheel-part-trigger"/>
+                        <path d="M 400,100 L 700,100 L 700,300 L 400,300 Z" data-part="buttons-right" class="wheel-part-trigger"/>
+                        <path d="M 100,300 L 400,300 L 400,500 L 100,500 Z" data-part="grips" class="wheel-part-trigger"/>
+                        <path d="M 400,300 L 700,300 L 700,500 L 400,500 Z" data-part="encoders" class="wheel-part-trigger"/>
+                    </svg>
+                </div>
+                <div class="wheel-dynamic-text" id="wheelDescription">
+                    Pasa el cursor sobre los componentes del volante para analizar la telemetría integrada.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cursos" id="cursos">
+        <h3>NUESTROS PRODUCTOS</h3>
+        <div class="cursos-grid">
+            <div class="curso-card">
+                <h5>PRINCIPIANTE</h5>
+                <ul>
+                    <li>• Conceptos básicos de trazado</li>
+                    <li>• Técnicas de frenado inicial</li>
+                    <li>• 2 horas semanales de simulador</li>
+                </ul>
+                <div class="price">$80 <span>/ MES</span></div>
+                <button class="btn-card">VER MÁS</button>
+            </div>
+            <div class="curso-card">
+                <h5>MEDIO</h5>
+                <ul>
+                    <li>• Telemetría intermedia</li>
+                    <li>• Ajustes básicos de setup</li>
+                    <li>• 5 horas semanales + coaching</li>
+                </ul>
+                <div class="price">$120 <span>/ MES</span></div>
+                <button class="btn-card">VER MÁS</button>
+            </div>
+            <div class="curso-card">
+                <h5>AVANZADO</h5>
+                <ul>
+                    <li>• Setup avanzado dinámico</li>
+                    <li>• Estrategia de carrera Pro</li>
+                    <li>• Acceso ilimitado + torneos</li>
+                </ul>
+                <div class="price">$200 <span>/ MES</span></div>
+                <button class="btn-card">VER MÁS</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="circuitos" id="circuitos">
+        <h3>ENTRENÁ EN LOS CIRCUITOS MÁS IMPORTANTES</h3>
+        <div class="carousel-container">
+            <button class="carousel-arrow prev" id="prevBtn">‹</button>
+            
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="circuit-slide active">
+                        <img src="circuit-1.png" alt="Circuito Lusail" class="circuit-map">
+                        <h4>LUSAIL</h4>
+                        <p>Trazado técnico y veloz en medio del desierto catarí, ideal para control de carga aerodinámica.</p>
+                        <img src="flag-qa.png" alt="Qatar Flag" class="flag">
+                    </div>
+                    <div class="circuit-slide">
+                        <img src="circuit-2.png" alt="Circuito Melbourne" class="circuit-map">
+                        <h4>MELBOURNE</h4>
+                        <p>Semiurbano desafiante, curvas rápidas combinadas con frenadas fuertes cerca de los muros.</p>
+                        <img src="flag-au.png" alt="Australia Flag" class="flag">
+                    </div>
+                    <div class="circuit-slide">
+                        <img src="circuit-3.png" alt="Circuito Shanghai" class="circuit-map">
+                        <h4>SHANGHAI</h4>
+                        <p>Famoso por su larguísima recta trasera y la icónica curva de caracol inicial.</p>
+                        <img src="flag-cn.png" alt="China Flag" class="flag">
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-arrow next" id="nextBtn">›</button>
+        </div>
+    </section>
+
+    <section class="cta-bottom">
+        <h3>¿LISTO PARA DAR EL SIGUIENTE PASO?</h3>
+        <button class="btn-neon">EMPEZAR AHORA</button>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="footer-logo-text">APEX</span>
+                <p>Laboratorio de alta simulación y desarrollo profesional de simracing.</p>
+                <div class="social-icons">
+                    <img src="social-x.png" alt="X">
+                    <img src="social-ig.png" alt="Instagram">
+                    <img src="social-yt.png" alt="YouTube">
+                </div>
+            </div>
+            <div class="footer-links-column">
+                <h6>PROGRAMAS</h6>
+                <a href="#">Principiante</a>
+                <a href="#">Intermedio</a>
+                <a href="#">Avanzado</a>
+                <a href="#">Especiales</a>
+            </div>
+            <div class="footer-links-column">
+                <h6>SOPORTE</h6>
+                <a href="#">Contacto</a>
+                <a href="#">FAQs</a>
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+            </div>
+            <div class="footer-links-column">
+                <h6>SEDE</h6>
+                <p>UBA Diseño<br>Ciudad Universitaria<br>Buenos Aires, Argentina</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 APEX SIMRACING. TODOS LOS DERECHOS RESERVADOS. PROYECTO ACADÉMICO DG3.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+/* VARIABLES DE DISEÑO FIEL */
+:root {
+    --neon-yellow: #dfff00; /* Color exacto del render de Illustrator */
+    --bg-dark: #0a0a0a;
+    --bg-card: #141414;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+    --font-titles: 'Victor Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* RESET GENERAL CON ESTILO PIXEL PERFECT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* TIPOGRAFÍAS DE TÍTULOS */
+h1, h2, h3, h4, h5, h6, .footer-logo-text, .pilar-num {
+    font-family: var(--font-titles);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-yellow);
+}
+
+/* BOTONES */
+.btn-primary {
+    background-color: var(--neon-yellow);
+    color: var(--bg-dark) !important;
+    padding: 8px 18px;
+    border-radius: 0px; /* Manteniendo la estética angular pura */
+    font-weight: 700;
+}
+
+.btn-neon {
+    background-color: var(--neon-yellow);
+    color: var(--bg-dark);
+    padding: 14px 28px;
+    font-family: var(--font-titles);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-neon:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(223, 255, 0, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
+    padding: 14px 28px;
+    font-family: var(--font-titles);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--text-white);
+    color: var(--bg-dark);
+}
+
+/* HERO */
+.hero {
+    margin-top: 80px;
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    color: var(--text-gray);
+    max-width: 500px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-left: 4px solid var(--neon-yellow);
+}
+
+/* DE LA PANTALLA A LA PISTA */
+.pista-section {
+    padding: 100px 50px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.pista-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.pista-text h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stats-grid strong {
+    font-family: var(--font-titles);
+    font-size: 32px;
+    color: var(--neon-yellow);
+    display: block;
+}
+
+.pista-image img {
+    width: 100%;
+    border-radius: 0px;
+}
+
+/* ANIMACIÓN: MARQUEE SPONSORS ROTATIVO */
+.sponsors-marquee {
+    background-color: #000;
+    padding: 25px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 2px solid var(--neon-yellow);
+    border-bottom: 2px solid var(--neon-yellow);
+}
+
+.marquee-track {
+    display: inline-block;
+    animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-track span {
+    font-family: var(--font-titles);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-white);
+    margin-right: 100px;
+    letter-spacing: 2px;
+}
+
+@keyframes marquee-scroll {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* MANIFESTO */
+.manifesto {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #111;
+}
+
+.manifesto p {
+    font-size: 28px;
+    font-weight: 300;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: var(--neon-yellow);
+    font-weight: 700;
+}
+
+/* LOS TRES PILARES (+ ANIMACIÓN HOVER) */
+.pilares {
+    padding: 100px 50px;
+}
+
+.pilares h3 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.pilares-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pilar-card {
+    background-color: var(--neon-yellow);
+    color: var(--bg-dark);
+    padding: 40px;
+    flex: 1;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%); /* Simula formas angulares del bloque pixelado */
+}
+
+/* Efecto Hover pedido: se agranda levemente */
+.pilar-card:hover {
+    transform: scale(1.05);
+}
+
+.pilar-num {
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pilar-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* TECNOLOGÍA ELITE (VOLANTE TRACKING SCROLL) */
+.tecnologia {
+    padding: 100px 50px;
+    background-color: #070707;
+}
+
+.tecnologia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.interactive-wheel-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wheel-display-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.base-wheel {
+    width: 100%;
+    display: block;
+    transition: transform 0.1s ease-out; /* El JS manejará el scaling al scroll */
+}
+
+/* Capa de color reactiva al Hover */
+.wheel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('volante-hover.png');
+    background-size: cover;
+    opacity: 0;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.wheel-svg-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.wheel-part-trigger {
+    fill: transparent;
+    cursor: pointer;
+}
+
+.wheel-dynamic-text {
+    margin-top: 30px;
+    background: #111;
+    padding: 20px;
+    border-left: 3px solid var(--neon-yellow);
+    font-family: var(--font-titles);
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* NUESTROS PRODUCTOS (HOVER AMARILLO Y EXTENSIÓN) */
+.cursos {
+    padding: 100px 50px;
+}
+
+.cursos h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.curso-card {
+    background-color: var(--bg-card);
+    border: 1px solid #222;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.curso-card ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.curso-card li {
+    margin-bottom: 12px;
+    color: var(--text-gray);
+}
+
+.curso-card .price {
+    font-family: var(--font-titles);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+    font-family: var(--font-titles);
+    cursor: pointer;
+}
+
+/* Hover solicitado: se agranda levemente y cambia a color amarillo completo */
+.curso-card:hover {
+    transform: scale(1.03);
+    background-color: var(--neon-yellow);
+    color: var(--bg-dark);
+}
+
+.curso-card:hover li {
+    color: var(--bg-dark);
+}
+
+.curso-card:hover .btn-card {
+    border-color: var(--bg-dark);
+    color: var(--bg-dark);
+}
+
+/* CAROUSEL CIRCUITOS */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.circuit-slide {
+    min-width: 100%;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.circuit-slide.active {
+    opacity: 1;
+}
+
+.circuit-map {
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.carousel-arrow {
+    background: transparent;
+    border: none;
+    color: var(--neon-yellow);
+    font-size: 48px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+/* CTA BOTTOM */
+.cta-bottom {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.cta-bottom h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* FOOTER TAL CUAL EL RENDER */
+.main-footer {
+    background-color: #000;
+    border-top: 1px solid #111;
+    padding: 80px 50px 30px 50px;
+}
+
+.footer-top {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer-logo-text {
+    font-size: 36px;
+    color: var(--neon-yellow);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: var(--text-gray);
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.footer-links-column h6 {
+    color: var(--text-white);
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-links-column a, .footer-links-column p {
+    display: block;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.footer-links-column a:hover {
+    color: var(--neon-yellow);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #111;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    color: #444;
+    font-family: var(--font-titles);
+}
